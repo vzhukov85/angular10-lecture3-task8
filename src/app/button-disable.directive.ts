@@ -20,7 +20,7 @@ export class ButtonDisableDirective {
   checkbox: Node;
   @HostBinding('disabled')
   get disabled(): string {
-    return this.condition ? 'disabled' : null;
+    return !this.condition ? 'disabled' : null;
   }
 
   onClickBox(): void {
